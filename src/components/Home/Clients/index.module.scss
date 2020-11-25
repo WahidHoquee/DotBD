@@ -1,16 +1,39 @@
-.root {
+.wrapper{
+    padding: 10rem;
+}
+.root{
+    padding: 5rem 0;
+}
+.card{
+    &:nth-child(4n+0) > div > div::before {
+        border-right: none;
+    }
+    &:nth-last-child(1) > div > div::after{
+        border-bottom: none;
+    }
+    &:nth-last-child(2) > div > div::after{
+        border-bottom: none;
+    }
+    &:nth-last-child(3) > div > div::after{
+        border-bottom: none;
+    }
+    &:nth-last-child(4) > div > div::after{
+        border-bottom: none;
+    }
+}
+.cardClient {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 3.5rem;
 }
 .clientBox {
     position: relative;
-    padding: 10px;
-    margin: 0 20px;
+    padding: 1rem;
+    margin: 0 2rem;
     &::before {
         position: absolute;
         content: "";
         height: 95%;
-        right: -33px;
+        right: -3.3rem;
         bottom: 8px;
         width: 1px;
         border-right: 1px solid #d2d2d2;
@@ -30,11 +53,11 @@
     }
 }
 .logo {
-    height: 120px;
-    width: 120px;
-    transform: translateX(12px);
+    height: 12rem;
+    width: 12rem;
+    transform: translateX(1.2rem);
     &:hover {
-        transform: translateX(12px) scale(1.14);
+        transform: translateX(1.2rem) scale(1.14);
         transition: 0.5s;
     }
 }
@@ -47,13 +70,100 @@
     color: #150941;
 }
 
-.borderRight {
-    &::before {
-        border-right: none !important;
+@media (max-width: 1120px) {
+    .wrapper{
+        padding: 10rem 5rem;
     }
 }
-.borderBottom {
-    &::after {
-        border-bottom: none !important;
+  
+@media (max-width: 900px) {
+    .wrapper{
+        padding: 15rem 2rem 10rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .card{
+        &:nth-child(4n+0) > div > div::before {
+            border-right: 1px solid #d2d2d2;
+        }
+        &:nth-child(3n+0) > div > div::before {
+            border-right: none;
+        }
+        &:nth-last-child(1) > div > div::after{
+            border-bottom: none;
+        }
+        &:nth-last-child(2) > div > div::after{
+            border-bottom: none;
+        }
+        &:nth-last-child(3) > div > div::after{
+            border-bottom: none;
+        }
+        &:nth-last-child(4) > div > div::after{
+            border-bottom: 1px solid #d2d2d2;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .card{
+        &:nth-child(4n+0) > div > div::before {
+            border-right: 1px solid #d2d2d2;
+        }
+        &:nth-child(3n+0) > div > div::before {
+            border-right: none;
+        }
+        &:nth-last-child(1) > div > div::after{
+            border-bottom: none;
+        }
+        &:nth-last-child(2) > div > div::after{
+            border-bottom: none;
+        }
+        &:nth-last-child(3) > div > div::after{
+            border-bottom: none;
+        }
+        &:nth-last-child(4) > div > div::after{
+            border-bottom: 1px solid #d2d2d2;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .card{
+        &:nth-child(4n+0) > div > div::before {
+            border-right: 1px solid #d2d2d2;
+        }
+        &:nth-child(3n+0) > div > div::before {
+            border-right: 1px solid #d2d2d2;
+        }
+        &:nth-child(2n+0) > div > div::before {
+            border-right: none;
+        }
+        &:nth-last-child(1) > div > div::after{
+            border-bottom: none;
+        }
+        &:nth-last-child(2) > div > div::after{
+            border-bottom: none;
+        }
+        &:nth-last-child(3) > div > div::after{
+            border-bottom: 1px solid #d2d2d2;
+        }
+        &:nth-last-child(4) > div > div::after{
+            border-bottom: 1px solid #d2d2d2;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .wrapper{
+        padding: 15rem 1.5rem 10rem 0;
+    }
+
+    .logo {
+        height: 8rem !important;
+        width: 8rem !important;
+        &:hover {
+            transform: translateX(1.2rem) scale(1.05);
+        }
     }
 }
