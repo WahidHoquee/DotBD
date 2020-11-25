@@ -9,13 +9,19 @@ const useStyles = makeStyles(theme => ({
         // flexDirection: 'row',
         alignItems: 'center',
         color: '#fff',
-        fontSize:'16px',
-        marginBottom: '15px'
+        fontSize:'1.6rem',
+        marginBottom: '1.5rem'
     },
     icon:{
         color: theme.palette.secondary.main,
-        height: '30px',
-        width: '30px'
+        height: '3rem',
+        width: '3rem'
+    },
+    iconLocation:{
+        width: '7rem',
+        [theme.breakpoints.down('sm')]: {
+            width: '3rem',
+        },
     }
 }))
 
@@ -43,7 +49,7 @@ const Contact = () => {
             </Grid>
             <Grid item>
                 <Box className={classes.contact}>
-                    <MdLocationOn className={classes.icon}/>
+                    <MdLocationOn className={` ${classes.iconLocation} ${classes.icon}`}/>
                     <Box component="span" ml={2}>House-478, Road-32, Mohakhali DOHS, Dhaka, Bangladesh</Box>
                 </Box>
             </Grid>

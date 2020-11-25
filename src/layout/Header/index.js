@@ -1,12 +1,12 @@
 import React from "react"
-import './header.css'
+import './index.scss'
 import Menubar from "./Menubar"
 import MenuDrawer from "./MenuDrawer"
 
 const Header = props => (
     <div className="header">
       <div className="inner-header flex">
-        {props.screens.sm ? <MenuDrawer/> : <Menubar/>}
+        {props.sm ? <MenuDrawer/> : <Menubar/>}
         <div className="hero">
           <div className="dotShape shape1"></div>
           <div className="dotShape shape2"></div>

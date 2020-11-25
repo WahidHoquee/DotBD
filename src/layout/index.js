@@ -7,7 +7,7 @@ import {Helmet} from "react-helmet";
 import MessengerCustomerChat from "react-messenger-customer-chat"
 import useSiteMetadata from '../hooks/useSiteMetadata'
 
-import "./index.css"
+import "./index.scss"
 import theme from '../data/ThemeProvider'
 
 import Header from "./Header"
@@ -26,6 +26,7 @@ const Layout = props => {
     const md = useMediaQuery(theme => theme.breakpoints.down('md'));
     const sm = useMediaQuery(theme => theme.breakpoints.down('sm'));
     const xs = useMediaQuery(theme => theme.breakpoints.down('xs'));
+    const screens = { lg, md, sm, xs }
 
     return (
         <ThemeProvider theme={theme}>
@@ -34,9 +35,9 @@ const Layout = props => {
                 <title>{title}</title>
                 <meta name="description" content={description} />
             </Helmet>
-            <Header screens={{lg,md,sm}}>
+            <Header {...screens}>
                 {/* Home page */}
-                {isHome && !isBlog && <Hero screens={{lg,md,sm,xs}}/>} 
+                {isHome && !isBlog && <Hero {...screens}/>} 
 
                 {/* Blog Page */}
                 {!isHome && isBlog && (
@@ -56,7 +57,7 @@ const Layout = props => {
             </Header>
             <main>{props.children}</main>
             {!props.isBlog && <Proposal />}
-            <Footer />
+            <Footer  {...screens}/>
             <MessengerCustomerChat
                 pageId="104903164358262"
                 appId="447990572562411"

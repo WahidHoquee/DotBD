@@ -15,12 +15,12 @@ const useStyles = makeStyles(theme => ({
         justifyContent: "center",
         alignContent: "center",
         padding: "8px",
-        borderRadius: "20px",
+        borderRadius: "2rem",
         marginRight: "7px",
     },
     icon: {
-        height: "22px",
-        width: "22px",
+        height: "2.2rem",
+        width: "2.2rem",
     },
 }))
 

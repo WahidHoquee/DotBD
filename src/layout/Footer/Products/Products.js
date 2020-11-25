@@ -32,11 +32,11 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-const Products = () => {
+const Products = ({s500}) => {
     const classes = useStyles();
     const links = ['ERP Solution','Banking Solution','HR Management','University Management','Marketing Monitoring']
     return (
-        <Grid container direction="column" alignContent="center" justify="center">
+        <Grid container direction="column" alignContent={s500 ? "strech" : "center"} justify="center">
             <Typography variant="h5" gutterBottom className={classes.headline}>
                 Our Products
             </Typography>

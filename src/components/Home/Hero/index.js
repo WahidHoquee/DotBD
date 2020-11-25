@@ -6,7 +6,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 
 // import Menubar from "./Menubar/Menubar"
 
-const Hero = ({ screens }) => {
+const Hero = ({ lg, md, sm, xs }) => {
   const classes = useStyles();
   const data = useStaticQuery(graphql`
       query {
@@ -22,13 +22,13 @@ const Hero = ({ screens }) => {
   return (
     <Container className={classes.hero}>
       <Grid container>
-        <Grid item xs={screens.xs ? 0 : screens.sm ? 5 : 6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <Grid item xs={xs ? 0 : sm ? 5 : 6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
           <Image
             fluid={data.file.childImageSharp.fluid}
             className={classes.heroImage}
           />
         </Grid>
-        <Grid item xs={screens.xs ? 12 : screens.sm ? 7 : 6} className={classes.bodyText}>
+        <Grid item xs={xs ? 12 : sm ? 7 : 6} className={classes.bodyText}>
           <h2 className={classes.heroTitle}>Listening to You, Answering with Software</h2>
           <p className={classes.heroSubtitle}>
             For quality Website Development, Software Development and Enterprise Software Solution Dot Bangladesh is the best choice. Providing customized HRM, Accounting and ERP software.

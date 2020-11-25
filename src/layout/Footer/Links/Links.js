@@ -33,10 +33,10 @@ const useStyles = makeStyles(theme => ({
 }))
 
 
-const Links = () => {
+const Links = ({s500}) => {
     const classes = useStyles();
     return (
-        <Grid container direction="column" alignContent="center" justify="center">
+        <Grid container direction="column" alignContent={s500 ? "strech" : "center"} justify="center">
             <Typography variant="h5" gutterBottom className={classes.headline}>
                 Important Links
             </Typography>
