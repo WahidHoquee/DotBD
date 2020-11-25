@@ -77,17 +77,21 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-height: 900px) {
   .inner-header {
     height:70vh;
   }
 }
-@media (max-width: 350px) {
+@media (max-height: 800px) {
   .inner-header {
-    height:75vh;
+    height:85vh;
   }
 }
-
+@media (max-height: 650px) {
+  .inner-header {
+    height:90vh;
+  }
+}
 
 .dotShape {
   position: absolute;

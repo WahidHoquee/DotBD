@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
     logo:{
         height: '6rem',
         width: '12rem',
-        margin: '4rem 0 3rem',
+        margin: '4rem 2rem 3rem',
     },
     lists:{
         display: 'flex',

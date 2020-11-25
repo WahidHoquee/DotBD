@@ -4,13 +4,29 @@ import { makeStyles } from "@material-ui/core/styles"
 
 const useStyles = makeStyles(theme => ({
     product: {
-        padding: "6rem 4rem",
+        padding: "3rem",
+        height: '30rem',
         margin: '0 1.5rem',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
         borderTop: "6px solid transparent",
         borderRadius: 6,
         transition: "all 0.3s linear",
         cursor: "pointer",
         boxShadow: " 0 5px 10px 0 rgba(64, 1, 4, 0.1), 0 -6px 0 0 rgba(248, 99, 107, 0.004)",
+        [theme.breakpoints.down(1450)]: {
+            height: '32rem',
+        },
+        [theme.breakpoints.down('sm')]: {
+           padding: "10rem 5rem",
+        },
+        [theme.breakpoints.down(750)]: {
+            padding: "10rem 2rem",
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: "10rem 5rem",
+        },
         "&:hover": {
             borderColor: "#f6626a",
             background: "#fff",
