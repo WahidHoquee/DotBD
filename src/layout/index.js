@@ -56,7 +56,7 @@ const Layout = props => {
                 )}
             </Header>
             <main>{props.children}</main>
-            {!props.isBlog && <Proposal />}
+            {!props.isBlog && <Proposal {...screens}/>}
             <Footer  {...screens}/>
             <MessengerCustomerChat
                 pageId="104903164358262"

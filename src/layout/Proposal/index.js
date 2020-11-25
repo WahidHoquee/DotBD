@@ -7,10 +7,16 @@ import Title from '../../components/Utils/Title'
 const useStyles = makeStyles(theme => ({
     root: {
         width: "100%",
-        padding: 100,
+        padding: '10rem',
         boxShadow: "2px 2px 30px 0 rgba(0,0,0,.05)",
         backgroundColor: '#fffafa',
-        backgroundImage: 'url("https://www.transparenttextures.com/patterns/climpek.png")'
+        backgroundImage: 'url("https://www.transparenttextures.com/patterns/climpek.png")',
+        [theme.breakpoints.down('sm')]: {
+            padding: '10rem 5rem',
+        },      
+        [theme.breakpoints.down(480)]: {
+            padding: '10rem 1rem',
+        },      
     },
     input: {
         width: "80%",
@@ -28,6 +34,9 @@ const useStyles = makeStyles(theme => ({
     image: {
         height: "50rem",
         width: "50rem",
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+        },      
     },
 }))
 
@@ -50,14 +59,14 @@ const category = [
     },
 ]
 
-const Proposal = () => {
+const Proposal = ({ lg, md, sm, xs }) => {
     const classes = useStyles()
     return (
         <form className={classes.root} noValidate autoComplete="off">
-            <Container fixed>
+            <Container fluid>
                 <Title>Request for Proposal</Title>
                 <Grid container justify="center" alignContent="center">
-                    <Grid item container direction="column" justify="center" xs={8}>
+                    <Grid item container direction="column" justify="center" align="center" xs={sm ? 12 : 8}>
                         <Grid item>
                             <TextField
                                 id="outlined-basic"
