@@ -22,9 +22,12 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#fff',
   },
   box: {
-    padding: "100px",
+    padding: "10rem",
     background: "linear-gradient(180deg,#fff,#eee)",
-    boxShadow: "2px 2px 30px 0 rgba(0,0,0,.05)"
+    boxShadow: "2px 2px 30px 0 rgba(0,0,0,.05)",
+    [theme.breakpoints.down('sm')]: {
+      padding: "1rem",
+    },
   },
   tabs:{
     backgroundColor: '#fff'
@@ -32,14 +35,14 @@ const useStyles = makeStyles(theme => ({
   tab:{
     color: '#68676f',
     fontWeight: 500,
-    fontSize: '14px',
+    fontSize: '1.4rem',
     '&:hover':{
       color: theme.palette.primary.main,
     }
   },
   detailsIcon: {
-    height:'50px',
-    width:'50px',
+    height:'5rem',
+    width:'5rem',
     fontWeight:200,
     color: theme.palette.secondary.main,
   },

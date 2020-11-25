@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
             content: '""',
             display: 'block',
             position: 'absolute',
-            marginLeft: '-42.5px',
+            marginLeft: '-4.25rem',
             width: '9.5rem',
             height: 8,
             left: '50%',
@@ -33,15 +33,9 @@ const useStyles = makeStyles(theme => ({
 const Title = props => {
     const classes = useStyles();
     return (
-        <Container>
-            <Grid container alignItems="center" justify="center">
-                <Grid item xs={6}>
-                    <h1 className={classes.heading}>
-                        {props.children}
-                    </h1>
-                </Grid>
-            </Grid>
-        </Container>
+        <h1 className={classes.heading}>
+            {props.children}
+        </h1>
     )
 }
 

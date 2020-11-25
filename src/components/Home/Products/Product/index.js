@@ -51,21 +51,19 @@ const useStyles = makeStyles(theme => ({
 const Product = ({ id, icon, title, description }) => {
     const classes = useStyles()
     return (
-        <Grid item xs={4}>
-            <div className={classes.product}>
-                <div className={classes.iconHolder}>
-                    <img src={icon[id]} alt={title} width="50" height="50" />
-                </div>
-                <h3 className={classes.heading}>{title}</h3>
-                <ul className={classes.list}>
-                    {description.map(list => (
-                        <li key={list} className={classes.items}>
-                            {list}
-                        </li>
-                    ))}
-                </ul>
+        <div className={classes.product}>
+            <div className={classes.iconHolder}>
+                <img src={icon[id]} alt={title} width="50" height="50" />
             </div>
-        </Grid>
+            <h3 className={classes.heading}>{title}</h3>
+            <ul className={classes.list}>
+                {description.map(list => (
+                    <li key={list} className={classes.items}>
+                        {list}
+                    </li>
+                ))}
+            </ul>
+        </div>
     )
 }
 
