@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Resolution Below - 1920 -> xl */
+html {
+  font-size: 62.5%;
+}
+
+/* Resolution Below - 1280 -> lg */
+@media (max-width: 80em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* Resolution Below - 960 -> md */
+@media (max-width: 60em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* Resolution Below - 600 -> sm */
+@media (max-width: 37.5em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #21346d;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul{
+    list-style: none;
+}
+
+.heading-secondary{
+  color: #0a0a75;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: normal;
+  margin-bottom: 3rem;
+}
+
+/*
+  ------Slick Slider Global Configuration------
+  ---------------------------------------------
+*/
+
+.slick-current > div > div {
+    background-color: #fff;
+    padding: 7rem 3rem;
+    opacity: 1 !important;
+    /* height: 55rem; */
+}
+.slick-list{
+  overflow: visible !important;
+}
+.slick-track{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
