@@ -26,6 +26,9 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down(750)]: {
             padding: '10rem 5rem 8rem',
         },
+        [theme.breakpoints.down(450)]: {
+            backgroundImage: 'linear-gradient(73deg, #1d165d 36%, #b70909 100%)',
+        },
     },
     wrapper: {
         [theme.breakpoints.down(500)]: {
