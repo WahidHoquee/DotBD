@@ -10,7 +10,6 @@ const Clients = () => {
     const clientImage = useClientImage();
     const sm = useMediaQuery(theme => theme.breakpoints.down(800));
     const xs = useMediaQuery(theme => theme.breakpoints.down(600));
-    const xxs = useMediaQuery(theme => theme.breakpoints.down(400));
 
     return (
     <Container fluid className={styles.wrapper}>
