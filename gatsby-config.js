@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: 'Dot Bangladesh',
+    description: 'For quality Website Development, Software Development and Enterprise Software Solution Dot Bangladesh is the best choice. Providing customized HRM, Accounting and ERP software.',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,11 +26,12 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-playground`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-transition-link`,
     // `gatsby-plugin-material-ui`,
     `gatsby-theme-material-ui`
-    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // this (optional) plugin e nables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],

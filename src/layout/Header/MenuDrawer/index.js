@@ -1,24 +1,18 @@
 import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import IconButton from '@material-ui/core/IconButton';
-import Drawer from '@material-ui/core/Drawer';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import Collapse from '@material-ui/core/Collapse';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
+import { makeStyles } from '@material-ui/core/styles';
+import IconButton from '@material-ui/core/IconButton';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import Collapse from '@material-ui/core/Collapse';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+
 import { RiMenu3Line } from 'react-icons/ri'
-import { BiUpArrow, BiDownArrow } from 'react-icons/bi'
+import { BiUpArrow, BiDownArrow } from 'react-icons/bi';
+
 import logo from "../../../images/logo-white.svg";
 import logoDark from "../../../images/logo-color.svg";
 

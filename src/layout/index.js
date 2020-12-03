@@ -2,7 +2,7 @@ import React from "react";
 import { ThemeProvider } from "@material-ui/core"
 import { useMediaQuery, Container } from "@material-ui/core"
 import { makeStyles } from "@material-ui/styles"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import {Helmet} from "react-helmet";
 import MessengerCustomerChat from "react-messenger-customer-chat"
 import useSiteMetadata from '../hooks/useSiteMetadata'
@@ -20,7 +20,7 @@ const Layout = props => {
     const classes = useStyles();
 
     const { title, description } = useSiteMetadata();
-    const { isHome, isBlog, headline, category, author, readTime } = props;
+    const { isHome, isBlog, headline, category, author } = props;
 
     const lg = useMediaQuery(theme => theme.breakpoints.down('lg'));
     const md = useMediaQuery(theme => theme.breakpoints.down('md'));
@@ -43,7 +43,7 @@ const Layout = props => {
                 {!isHome && isBlog && (
                     <Container style={props.screens.md ? {padding: '0 2rem'} : null}>
                         <h4 className={classes.categoryTitle}>{category.metaTag}</h4>
-                        <h2 className={`${classes.heroTitle} ${classes.nonHomeTitle}`}>{headline}</h2>
+                        <h2 className={classes.heroTitle}>{headline}</h2>
                         <h5 style={{textAlign: "center"}}>
                             <Link to={author.facebook} className={classes.subTitle}>{author.name}</Link>
                         </h5>
@@ -52,7 +52,7 @@ const Layout = props => {
 
                 {/* Others Page */}
                 {!isHome && !isBlog && (
-                    <h2 className={`${classes.heroTitle} ${classes.nonHomeTitle}`}>{headline}</h2>
+                    <h2 className={classes.heroTitle}>{headline}</h2>
                 )}
             </Header>
             <main>{props.children}</main>
@@ -73,8 +73,21 @@ const useStyles = makeStyles(theme => ({
         fontWeight: 700,
         marginBottom: '2rem',
         color: '#fff',
-        lineHeight: '5rem',
-        fontSize: '4rem'
+        lineHeight: '10rem',
+        fontSize: '4rem',
+        textAlign: 'center',
+        fontSize: '10rem !important',
+        letterSpacing: 4,
+        position: 'absolute',
+        top: '45%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        [theme.breakpoints.down(800)]: {
+            top: '48%',
+        },
+        [theme.breakpoints.down(800)]: {
+            top: '50%',
+        },
     },
     heroSubtitle:{
         color: '#fff',
@@ -82,12 +95,6 @@ const useStyles = makeStyles(theme => ({
         fontSize: '1.7rem',
         fontWeight: 300,
         marginBottom: '2rem'
-    },
-    nonHomeTitle:{
-        textAlign: 'center',
-        fontSize: '10rem !important',
-        letterSpacing: 4,
-        transform: 'translate(0, 3.5rem)'
     },
     subTitle:{
         textAlign: "center",

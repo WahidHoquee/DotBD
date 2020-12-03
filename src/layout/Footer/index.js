@@ -75,7 +75,7 @@ const Footer = ({ sm, xs }) => {
                             <Social/>
                         </Grid>
                     </Grid>
-                    <Grid item xs={xs ? 12 : sm ? 6 : 3} style={{margin: xs && '5rem 0 5rem' || sm && '0 0 5rem'}}>
+                    <Grid item xs={xs ? 12 : sm ? 6 : 3} style={{margin: (xs && '5rem 0 5rem') || (sm && '0 0 5rem')}}>
                         <Contact/>
                     </Grid>
                     {/* {sm && <Grid item><Divider/></Grid>} */}
