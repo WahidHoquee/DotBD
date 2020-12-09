@@ -5,7 +5,7 @@ import Summary from "./Summary/summary";
 import SliderModule from "./Modules/sliderModule";
 import Applications from "./Modules/Applications";
 
-import { PriceContext } from "../../../context/pricing"
+import { PriceContext } from "../../../store/context";
 
 const PriceCalculation = () => {
     const { pricing } = useContext(PriceContext);

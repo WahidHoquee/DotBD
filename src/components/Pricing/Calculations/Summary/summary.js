@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { Grid, Box } from "@material-ui/core"
 import SummaryBox from "./SummaryBox/SummaryBox"
-import { PriceContext } from "../../../../context/pricing"
+import { PriceContext } from "../../../../store/context";
 
 const Summary = () => {
     const {pricing} = useContext(PriceContext);

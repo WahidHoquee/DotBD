@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { Box, Grid } from "@material-ui/core"
 
-import { PriceContext } from "../../../../context/pricing"
+import { PriceContext } from "../../../../store/context";
 
 const SliderModule = ({ title, type }) => {
     const { pricing } = useContext(PriceContext)
