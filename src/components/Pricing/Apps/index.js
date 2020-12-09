@@ -1,53 +1,47 @@
-import React, { useContext } from "react"
-import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography, TextField, Grid } from "@material-ui/core"
-import ExpandMoreIcon from "react-icons/md"
+import React from "react"
+import { Tabs, Tab } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
 
-import { PriceContext } from "../../../store/context"
-import Modules from "./Modules"
+import Module from "./Modules"
+import modules from '../../../data/Modules';
 
-const Starter = ({ sector, price }) => {
-    // const { dispatch } = useContext(PriceContext)
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.paper,
+    display: "flex",
+  },
+  tabs: {
+    borderRight: `1px solid ${theme.palette.divider}`,
+  },
+}))
 
-    return (
-        <ExpansionPanel defaultExpanded>
-            {/* <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography>Users</Typography>
-            </ExpansionPanelSummary> */}
-            <ExpansionPanelDetails>
-                <Grid container>
-                    <Grid item xs={6}>
-                        <TextField
-                            label="Number"
-                            type="number"
-                            InputLabelProps={{
-                                shrink: true,
-                            }}
-                            variant="outlined"
-                            // onChange={e =>
-                            //     dispatch({
-                            //         type: "USER_SLIDER",
-                            //         value: e.target.value,
-                            //     })
-                            // }
-                        />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <span> Users x 4,000.00 BDT </span>
-                    </Grid>
-                </Grid>
-            </ExpansionPanelDetails>
-        </ExpansionPanel>
-    )
+const Apps = ({ sector, price }) => {
+  const classes = useStyles()
+  const moduleNames = Object.keys(modules)
+  const [value, setValue] = React.useState('start')
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue)
+  }
+
+  return (
+    <div className={classes.root}>
+      <Tabs
+        orientation="vertical"
+        variant="scrollable"
+        value={value}
+        onChange={handleChange}
+        className={classes.tabs}
+      >
+        {
+            moduleNames.map(moduleName => (
+                <Tab key={moduleName} label={moduleName.toUpperCase()} value={moduleName} />
+            ))
+        }
+      </Tabs>
+      <Module value={value} index={0}/>
+    </div>
+  )
 }
-
-const PriceModule = ({apps}) => {
-    return (
-        <div>
-            <Starter sector="Users" price="4,000.00" />
-            <Starter sector="Branches" price="24,000.00" />
-            <Modules apps={apps}/>
-        </div>
-    )
-}
-
-export default PriceModule
+export default Apps
