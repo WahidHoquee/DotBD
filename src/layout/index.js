@@ -20,7 +20,7 @@ const Layout = props => {
     const classes = useStyles();
 
     const { title, description } = useSiteMetadata();
-    const { isHome, isBlog, headline, category, author } = props;
+    const { isHome, isDetails, isBlog, headline, category, author } = props;
 
     const lg = useMediaQuery(theme => theme.breakpoints.down('lg'));
     const md = useMediaQuery(theme => theme.breakpoints.down('md'));
@@ -37,22 +37,21 @@ const Layout = props => {
             </Helmet>
             <Header {...screens}>
                 {/* Home page */}
-                {isHome && !isBlog && <Hero {...screens}/>} 
+                {isHome && !isDetails && <Hero {...screens}/>} 
 
                 {/* Blog Page */}
                 {!isHome && isBlog && (
-                    <Container style={props.screens.md ? {padding: '0 2rem'} : null}>
-                        <h4 className={classes.categoryTitle}>{category.metaTag}</h4>
+                    <Container style={md ? {padding: '0 2rem'} : null}>
                         <h2 className={classes.heroTitle}>{headline}</h2>
-                        <h5 style={{textAlign: "center"}}>
-                            <Link to={author.facebook} className={classes.subTitle}>{author.name}</Link>
-                        </h5>
                     </Container>
                 )}
-
                 {/* Others Page */}
-                {!isHome && !isBlog && (
+                {!isHome && !isDetails && (
                     <h2 className={classes.heroTitle}>{headline}</h2>
+                )}
+                {/* Auto Generated Details Page */}
+                {!isHome && isDetails && (
+                    <h2 className={classes.detailTitle}>{headline}</h2>
                 )}
             </Header>
             <main>{props.children}</main>
@@ -73,8 +72,7 @@ const useStyles = makeStyles(theme => ({
         fontWeight: 700,
         marginBottom: '2rem',
         color: '#fff',
-        lineHeight: '10rem',
-        fontSize: '4rem',
+        lineHeight: '12rem',
         textAlign: 'center',
         fontSize: '10rem !important',
         letterSpacing: 4,
@@ -85,8 +83,34 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down(800)]: {
             top: '48%',
         },
-        [theme.breakpoints.down(800)]: {
+        [theme.breakpoints.down(400)]: {
             top: '50%',
+        },
+    },
+    detailTitle: {
+        fontFamily: "'Poppins', sans-serif",
+        fontWeight: 700,
+        marginBottom: '2rem',
+        color: '#fff',
+        lineHeight: '10rem',
+        textAlign: 'center',
+        fontSize: '8rem !important',
+        letterSpacing: 4,
+        position: 'absolute',
+        top: '45%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        [theme.breakpoints.down(800)]: {
+            top: '48%',
+        },
+        [theme.breakpoints.down(400)]: {
+            top: '50%',
+            fontSize: '6rem !important',
+            lineHeight: '10rem',
+        },
+        [theme.breakpoints.down(350)]: {
+            fontSize: '4rem !important',
+            lineHeight: '6rem',
         },
     },
     heroSubtitle:{

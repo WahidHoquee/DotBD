@@ -31,7 +31,7 @@ const Menubar = () => {
                         <ul className={classes.sublists}>
                             {subMenu.map(({path, title}) => 
                                 <li className={classes.sublist} key={title}>
-                                    <AniLink fade duration={5} to={path} className={classes.sublink}>
+                                    <AniLink fade duration={5} to={window.location.origin + '/service' + path} className={classes.sublink}>
                                         {title}
                                     </AniLink>
                                 </li>
@@ -134,13 +134,13 @@ const useStyles = makeStyles(theme => ({
     },
     sublists:{
         position: 'absolute',
-        left: '-7rem',
+        left: '-11rem',
         top: '100%',
         zIndex: 1000,
         color: '#212529',
         backgroundColor: '#fff',
         boxShadow: '-1px 2px 19px 3px rgba(14,0,40,.05)',
-        minWidth: '23rem',
+        minWidth: '30rem',
         transform: 'translateY(2rem)',
         transition: 'all .3s ease-in',
         opacity: 0,

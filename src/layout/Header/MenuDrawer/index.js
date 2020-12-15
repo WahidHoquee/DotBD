@@ -124,7 +124,7 @@ const MenuDrawer = () => {
               <Collapse in={open[link.title]} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding className={classes.sublink} style={{marginLeft: '6rem'}}>
                   {link.subMenu && link.subMenu.map(menu => (
-                    <AniLink fade duration={5} to={menu.path}>
+                    <AniLink fade duration={5} to={window.location.origin + '/service' + menu.path}>
                       <ListItem key={menu.title} >
                         <ListItemText primary={menu.title} className={classes.sublink} />
                       </ListItem>

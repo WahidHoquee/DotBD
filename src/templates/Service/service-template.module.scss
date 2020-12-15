@@ -1,0 +1,101 @@
+.h3 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+.h4 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.h5 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.body {
+  font: 400 1.5rem/2.8rem "Poppins", sans-serif;
+  margin-bottom: 1rem;
+  color: #21346d;
+  // margin-left: 2rem;
+}
+.cover {
+  margin: 4rem auto;
+  width: 80rem;
+  text-align: center;
+  // height: 30rem;
+}
+.unorderedList {
+  list-style-type: square;
+  margin: 1.5rem 0;
+  margin-left: 5rem;
+  font-family: "Poppins", sans-serif;
+}
+.orderedList {
+  list-style-type: decimal;
+  margin: 1.5rem 0;
+  margin-left: 5rem;
+}
+.article {
+  // max-width: 90rem;
+  margin: 2rem auto 0;
+}
+
+.imageBlock {
+  // position: relative;
+  // margin-bottom: 25px;
+  min-height: 55px;
+  // width: 100%;
+  text-align: center;
+}
+.viewWrapper {
+  // width: 5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.infoWrapper {
+  padding: 0.8rem;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  color: white;
+}
+.info {
+  margin-left: 0.2rem;
+}
+
+/* Resolution Below - 960 -> md */
+@media (max-width: 60em) {
+  .cover {
+    margin: 4rem auto;
+    width: 90%;
+  }
+}
+
+/* Resolution Below - 600 -> sm */
+@media (max-width: 37.5em) {
+  .cover {
+    margin: 4rem auto;
+    width: 100%;
+  }
+  .h3 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .h4 {
+    font-size: 2rem;
+    margin-bottom: 1.3rem;
+  }
+  .h5 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+}
+
+// @media (max-width: 37.5em) {
+//   html {
+//     font-size: 43.75%;
+//   }
+// }

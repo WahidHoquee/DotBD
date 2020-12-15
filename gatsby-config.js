@@ -30,9 +30,15 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-transition-link`,
     // `gatsby-plugin-material-ui`,
-    `gatsby-theme-material-ui`
-    // this (optional) plugin e nables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-theme-material-ui`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: 'qcq9j6h8u5o8',
+        accessToken: 'gXkyR0QoslswYUqwIs4Vb59X9TGMoqn4U0vmuTWxVYo',
+        downloadLocal: true,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }
