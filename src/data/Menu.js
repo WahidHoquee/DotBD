@@ -72,87 +72,41 @@ export default [
     icon: <RiShoppingCartLine />,
     megaMenu: [
       {
-        title: "Module-1",
+        title: "Common Solution",
         menu: [
-          {
-            path: "/portfolio",
-            title: "portfolio",
-          },
-          {
-            path: "/pricing",
-            title: "pricing",
-          },
-          {
-            path: "/blog",
-            title: "blog",
-          },
-          {
-            path: "/contact",
-            title: "contact us",
-          },
+          "Accounting Software",
+          "Human Resource Management",
+          "Store Management System",
+          "Loan / Micro Credit Management",
         ],
       },
       {
-        title: "Module-2",
+        title: "Asset Solution",
         menu: [
-          {
-            path: "/portfolio",
-            title: "portfolio",
-          },
-          {
-            path: "/pricing",
-            title: "pricing",
-          },
-          {
-            path: "/blog",
-            title: "blog",
-          },
-          {
-            path: "/contact",
-            title: "contact us",
-          },
+          "Sales Management",
+          "Purchase Management",
+          "Inventory & Stock Management",
+          "Assets Management"
         ],
       },
       {
-        title: "Module-3",
+        title: "Employee Solution",
         menu: [
-          {
-            path: "/portfolio",
-            title: "portfolio",
-          },
-          {
-            path: "/pricing",
-            title: "pricing",
-          },
-          {
-            path: "/blog",
-            title: "blog",
-          },
-          {
-            path: "/contact",
-            title: "contact us",
-          },
+          "Employee Management",
+          "Attendance Management",
+          "Leave Management",
+          "Performance Management",
+          "Payroll Management System",
         ],
       },
       {
-        title: "Module-4",
+        title: "Corporate Solution",
         menu: [
-          {
-            path: "/portfolio",
-            title: "portfolio",
-          },
-          {
-            path: "/pricing",
-            title: "pricing",
-          },
-          {
-            path: "/blog",
-            title: "blog",
-          },
-          {
-            path: "/contact",
-            title: "contact us",
-          },
+          "Hospital Management System",
+          "University Management System",
+          "Travel & Tour Management",
+          "Restaurant Management System",
+          "Garments Management",
         ],
       },
     ],
@@ -161,16 +115,16 @@ export default [
   //     path:'/portfolio',
   //     title:'portfolio'
   // },
-  {
-    path: "/pricing",
-    title: "Pricing",
-    icon: <RiExchangeDollarLine />,
-  },
-  {
-    path: "/blogs",
-    title: "Blogs",
-    icon: <FaBloggerB />,
-  },
+  // {
+  //   path: "/pricing",
+  //   title: "Pricing",
+  //   icon: <RiExchangeDollarLine />,
+  // },
+  // {
+  //   path: "https://blog.dot-bd.com/",
+  //   title: "Blogs",
+  //   icon: <FaBloggerB />,
+  // },
   {
     path: "/contact",
     title: "Contact Us",

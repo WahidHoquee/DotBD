@@ -13,10 +13,10 @@ const Megamenu = ({ style, linkStyle, data }) => {
                         <Grid item xs={3} className={classes.columnMenu} key={title}>
                             <h6 className={classes.title}>{title}</h6>
                             <ul className={classes.menu}>
-                                {menu && menu.map(({path, title}) => 
-                                    <li key={title}>
-                                        <AniLink fade duration={5} to={path} className={linkStyle}>
-                                            {title}
+                                {menu && menu.map((nav) => 
+                                    <li key={nav}>
+                                        <AniLink fade duration={5} to={nav.toLowerCase().replace(' ', '-')} className={linkStyle}>
+                                            {nav}
                                         </AniLink>
                                     </li>
                                 )}

@@ -29,7 +29,7 @@ module.exports = {
     `gatsby-plugin-playground`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-transition-link`,
-    // `gatsby-plugin-material-ui`,
+    `gatsby-plugin-material-ui`,
     `gatsby-theme-material-ui`,
     {
       resolve: `gatsby-source-contentful`,

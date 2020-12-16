@@ -6,7 +6,7 @@ import MenuDrawer from "./MenuDrawer"
 const Header = props => (
     <div className="header">
       <div className="inner-header flex">
-        {props.sm ? <MenuDrawer/> : <Menubar/>}
+        {props.sm ? <MenuDrawer/> : <Menubar location={props.location}/>}
         <div className="hero">
           <div className="dotShape shape1"></div>
           <div className="dotShape shape2"></div>

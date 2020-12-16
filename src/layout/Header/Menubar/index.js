@@ -8,7 +8,7 @@ import logo from "../../../images/logo-white.svg"
 import Megamenu from "./Megamenu";
 
 
-const Menubar = () => {
+const Menubar = ({ location }) => {
     const classes = useStyles();
     return (
         <div className={classes.menubar}>
@@ -31,7 +31,7 @@ const Menubar = () => {
                         <ul className={classes.sublists}>
                             {subMenu.map(({path, title}) => 
                                 <li className={classes.sublist} key={title}>
-                                    <AniLink fade duration={5} to={window.location.origin + '/service' + path} className={classes.sublink}>
+                                    <AniLink fade duration={5} to={'/service' + path} className={classes.sublink}>
                                         {title}
                                     </AniLink>
                                 </li>
